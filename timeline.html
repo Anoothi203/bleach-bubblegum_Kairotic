@@ -27,9 +27,9 @@
   .event::before {
     content: "";
     position: absolute;
-    left: -11px;
+    left: -25px;
     top: 0;
-    width: 20px;
+    width: 10px;
     height: 20px;
     background-color: #333;
     border: 2px solid #ff2d55;
@@ -43,7 +43,7 @@
   }
 
   .type {
-    margin-left: 5px;
+    margin-left: 7px;
     font-size: 0.9em;
     color: #ccc;
   }
@@ -71,11 +71,11 @@
 <script>
   // Example JSON data (replace this with API fetch)
   const timelineData = [
-    { year: 2012, type: "paper", title: "Preliminary flood risk assessment", url: "https://link.springer.com/article/10.1007/s11069-011-9930-5" },
-    { year: 2014, type: "paper", title: "Flood risk management", url: "https://nhess.copernicus.org/articles/14/1361/2014/" },
-    { year: 2015, type: "edition", title: "Why previous measures failed", url: "https://link.springer.com/article/10.1007/s11069-015-1911-7" },
-    { year: 2022, type: "paper", title: "Smart sensors pilot study", url: "https://scholar.google.com/scholar?q=smart+sensors+pilot+study" },
-    { year: 2023, type: "edition", title: "Current best practices & lessons", url: "" }
+    { year:  2011, type: "paper", title: "Preliminary flood risk assessment", url: "https://link.springer.com/article/10.1007/s11069-011-9930-5" },
+    { year:  2014, type: "paper", title: "Flood risk management", url: "https://nhess.copernicus.org/articles/14/1361/2014/" },
+    { year:  2015, type: "edition", title: "Why previous measures failed", url: "edition.html" },
+    { year:  2017, type: "paper", title: "Smart sensors pilot study", url: "https://karger.com/ger/article/63/3/281/147968" },
+    { year:  2021, type: "edition", title: "Current best practices & lessons", url: "edition.html" }
   ];
 
   const timelineContainer = document.getElementById('timeline');
