@@ -56,14 +56,19 @@
                        placeholder="transaction_number"
                        required>
                     </div>
-                     
+                     <p id="message"></p>
                    <input
   type="submit"
   value="Submit"
   class="btn btn-primary"
   onclick="confirmMembership(event)"
 >
-
+<script>
+  function confirmMembership(event) {
+    event.preventDefault(); // stops page reload
+    document.getElementById("message").textContent = "Membership confirmed";
+  }
+</script>
   
 
                 </form>
@@ -98,6 +103,7 @@
 </body>
 
 </html>
+
 
 
 
