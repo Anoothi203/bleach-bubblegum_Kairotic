@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <title> Hawkin's library </title>
+</head>
+<body>
+    <!--navbar -->
+    <div class="navbar">
+       <div class="container flex">
+        <h1 class="logo">Hawkin's library</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="search.html">Search</a></li>
+
+            </ul>
+        </nav>
+       </div> 
+    </div>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Paper</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+  .form-control {
+    margin-bottom: 20px;
+  }
+  #message {
+    color: red;
+    font-weight: bold;
+  }
+  input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+  }
+  input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h2>Search Research Paper</h2>
+
+<form id="searchForm">
+  <div class="form-control">
+    <input type="text" id="paperName" placeholder="Name of paper" required>
+  </div>
+  <input type="submit" value="Search">
+</form>
+
+<p id="message"></p>
+
+<script>
+  document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop default form submission
+
+    const paper = document.getElementById('paperName').value.trim().toLowerCase();
+
+    if (paper === 'flood risk') {
+      // Go to timeline.html
+      window.location.href = 'timeline.html';
+    } else {
+      // Show not found message
+      document.getElementById('message').textContent = 'Paper not found';
+    }
+  });
+</script>
+
+</body>
+</html>
+
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>Hawkin's library
+                </h1>
+                <p>Copyright &copy; 2020</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
