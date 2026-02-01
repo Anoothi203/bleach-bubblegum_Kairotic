@@ -17,4 +17,4 @@ Not just that , there is also a room for your creativity.
 
 ##Installation
 1. git clone : https://github.com/Anoothi203/bleach-bubblegum_kairotic
-2.project stucture : 
+ 
