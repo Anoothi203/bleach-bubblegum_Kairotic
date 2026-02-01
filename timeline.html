@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Timeline</title>
+<style>
+  body {
+    background-color: #1e1e1e;
+    color: #ccc;
+    font-family: 'Courier New', monospace;
+    padding: 40px;
+  }
+
+  .timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #555;
+  }
+
+  .event {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .event::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid #ff2d55;
+    border-radius: 50%;
+  }
+
+  .year {
+    color: #ff2d55;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .type {
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #ccc;
+  }
+
+  .title {
+    color: #00d8a8;
+    margin-left: 5px;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  .title:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<h1>Research Timeline</h1>
+
+<div class="timeline" id="timeline">
+  <!-- Timeline events will be injected here -->
+</div>
+
+<script>
+  // Example JSON data (replace this with API fetch)
+  const timelineData = [
+    { year: 2012, type: "paper", title: "Preliminary flood risk assessment", url: "https://link.springer.com/article/10.1007/s11069-011-9930-5" },
+    { year: 2014, type: "paper", title: "Flood risk management", url: "https://nhess.copernicus.org/articles/14/1361/2014/" },
+    { year: 2015, type: "edition", title: "Why previous measures failed", url: "https://link.springer.com/article/10.1007/s11069-015-1911-7" },
+    { year: 2022, type: "paper", title: "Smart sensors pilot study", url: "https://scholar.google.com/scholar?q=smart+sensors+pilot+study" },
+    { year: 2023, type: "edition", title: "Current best practices & lessons", url: "" }
+  ];
+
+  const timelineContainer = document.getElementById('timeline');
+
+  timelineData.forEach(item => {
+    const event = document.createElement('div');
+    event.className = 'event';
+
+    const year = document.createElement('div');
+    year.className = 'year';
+    year.textContent = item.year;
+    event.appendChild(year);
+
+    const type = document.createElement('div');
+    type.className = 'type';
+    type.textContent = item.type === 'paper' ? '📄 Research Paper' : '📘 Edition';
+    event.appendChild(type);
+
+    const title = document.createElement('a');
+    title.className = 'title';
+    title.textContent = `"${item.title}"`;
+    if (item.url) {
+      title.href = item.url;
+      title.target = "_blank";  // open in new tab
+    } else {
+      title.style.cursor = 'default'; // not clickable
+    }
+    event.appendChild(title);
+
+    timelineContainer.appendChild(event);
+  });
+</script>
+
+</body>
+</html>
